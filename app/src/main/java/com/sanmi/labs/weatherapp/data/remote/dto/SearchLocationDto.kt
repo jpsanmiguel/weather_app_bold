@@ -1,6 +1,6 @@
 package com.sanmi.labs.weatherapp.data.remote.dto
 
-data class SearchDto(
+data class SearchLocationDto(
     val id: Int?,
     val name: String?,
     val region: String?,
