@@ -5,3 +5,9 @@ plugins {
     id(Build.ksp) version Build.kspVersion apply false
     id(Dagger.hiltDaggerName) version Dagger.daggerVersion apply false
 }
+
+buildscript {
+    dependencies {
+        classpath(AndroidX.safeArgs)
+    }
+}

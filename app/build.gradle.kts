@@ -5,6 +5,7 @@ plugins {
     id(Build.kotlinJetbrainsName)
     id(Build.ksp)
     id(Dagger.hiltPlugin)
+    id(AndroidX.safeArgsPlugin)
 }
 
 android {

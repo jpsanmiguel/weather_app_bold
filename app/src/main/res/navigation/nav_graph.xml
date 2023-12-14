@@ -9,5 +9,18 @@
         android:id="@+id/locationSearchFragment"
         android:name="com.sanmi.labs.weatherapp.presentation.location_search.LocationSearchFragment"
         android:label="fragment_location_search"
-        tools:layout="@layout/fragment_location_search" />
+        tools:layout="@layout/fragment_location_search" >
+        <action
+            android:id="@+id/action_locationSearchFragment_to_weatherLocationFragment"
+            app:destination="@id/weatherLocationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherLocationFragment"
+        android:name="com.sanmi.labs.weatherapp.presentation.weather_location.WeatherLocationFragment"
+        android:label="WeatherLocationFragment" >
+        <argument
+            android:name="locationName"
+            app:argType="string" />
+    </fragment>
 </navigation>

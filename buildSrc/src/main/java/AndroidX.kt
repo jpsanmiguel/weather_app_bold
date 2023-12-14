@@ -15,4 +15,6 @@ object AndroidX {
     private const val navigationVersion = "2.7.6"
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+    const val safeArgsPlugin = "androidx.navigation.safeargs.kotlin"
 }

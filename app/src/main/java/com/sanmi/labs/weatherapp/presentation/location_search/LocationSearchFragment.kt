@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.sanmi.labs.bold.weather_app.databinding.FragmentLocationSearchBinding
 import com.sanmi.labs.weatherapp.core.util.Status
 import com.sanmi.labs.weatherapp.presentation.location_search.adapter.LocationAdapter
@@ -31,7 +32,11 @@ class LocationSearchFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         locationAdapter = LocationAdapter(LocationAdapter.OnClickListener {
-            // TODO implement
+            findNavController().navigate(
+                LocationSearchFragmentDirections.actionLocationSearchFragmentToWeatherLocationFragment(
+                    it.name
+                )
+            )
         })
         binding.locationRecyclerView.apply {
             adapter = locationAdapter
