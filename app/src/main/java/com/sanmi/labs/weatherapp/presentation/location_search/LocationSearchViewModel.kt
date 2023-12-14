@@ -1,4 +1,4 @@
-package com.sanmi.labs.weatherapp.presentation.home
+package com.sanmi.labs.weatherapp.presentation.location_search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class LocationSearchViewModel @Inject constructor(
     private val searchUseCase: SearchUseCase
 ) : BaseViewModel() {
 
