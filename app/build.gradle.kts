@@ -33,6 +33,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        dataBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -48,7 +51,12 @@ dependencies {
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
     implementation(AndroidX.constraintLayout)
+    implementation(AndroidX.navigationFragment)
+    implementation(AndroidX.navigationUi)
     implementation(Dagger.hiltAndroid)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     ksp(Dagger.hiltCompiler)
     implementation(Google.material)
     implementation(Retrofit.retrofit)

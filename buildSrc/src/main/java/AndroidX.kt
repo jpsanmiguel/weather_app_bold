@@ -11,4 +11,8 @@ object AndroidX {
 
     private const val splashscreenVersion = "1.1.0-alpha02"
     const val splashscreen = "androidx.core:core-splashscreen:$splashscreenVersion"
+
+    private const val navigationVersion = "2.7.6"
+    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 }
