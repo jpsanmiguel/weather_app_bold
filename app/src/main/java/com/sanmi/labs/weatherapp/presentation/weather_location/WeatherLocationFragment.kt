@@ -35,6 +35,9 @@ class WeatherLocationFragment : Fragment() {
 
         weatherLocationViewModel.getForecastWeather(args.locationName)
 
+        weatherLocationDayAdapter = WeatherLocationDayAdapter()
+        binding.weatherLocationRecyclerView.adapter = weatherLocationDayAdapter
+
         return binding.root
     }
 
@@ -47,8 +50,6 @@ class WeatherLocationFragment : Fragment() {
         }
 
         weatherLocationViewModel.forecast.observe(viewLifecycleOwner) {
-            weatherLocationDayAdapter = WeatherLocationDayAdapter(it.locationFullName())
-            binding.weatherLocationRecyclerView.adapter = weatherLocationDayAdapter
             weatherLocationDayAdapter.submitList(it.weatherLocationDayItem)
         }
     }

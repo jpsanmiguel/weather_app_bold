@@ -1,7 +1,10 @@
 package com.sanmi.labs.weatherapp.presentation.model
 
+import java.text.SimpleDateFormat
+import java.util.Locale
+
 data class WeatherLocationDayItem(
-    val date: String,
+    val dateEpoch: Long,
     val maxTemperatureCelsius: Double,
     val minTemperatureCelsius: Double,
     val averageTemperatureCelsius: Double,
@@ -13,4 +16,6 @@ data class WeatherLocationDayItem(
     val moonSet: String,
     val moonPhase: String,
     val hours: List<HourItem>
-)
+) {
+    val dateDisplayFormat: String = SimpleDateFormat("E, MMMM d", Locale.getDefault()).format(dateEpoch * 1000)
+}

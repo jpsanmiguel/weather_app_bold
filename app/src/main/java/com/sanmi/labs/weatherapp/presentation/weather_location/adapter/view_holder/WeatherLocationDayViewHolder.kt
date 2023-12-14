@@ -11,9 +11,8 @@ class WeatherLocationDayViewHolder private constructor(
     private val binding: ItemWeatherLocationDayBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(weatherLocationDayItem: WeatherLocationDayItem, locationFullName: String) {
+    fun bind(weatherLocationDayItem: WeatherLocationDayItem) {
         binding.weatherLocationDayItem = weatherLocationDayItem
-        binding.locationFullName = locationFullName
 
         Glide
             .with(binding.root)

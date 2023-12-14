@@ -22,7 +22,7 @@ fun ForecastResult.toWeatherLocationItem() = WeatherLocationItem(
 )
 
 fun ForecastDay.toWeatherLocationDayItem() = WeatherLocationDayItem(
-    this.date,
+    this.dateEpoch,
     this.day.maxTemperatureCelsius,
     this.day.minTemperatureCelsius,
     this.day.averageTemperatureCelsius,

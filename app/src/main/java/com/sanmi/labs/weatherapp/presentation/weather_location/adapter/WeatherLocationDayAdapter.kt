@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.sanmi.labs.weatherapp.presentation.model.WeatherLocationDayItem
 import com.sanmi.labs.weatherapp.presentation.weather_location.adapter.view_holder.WeatherLocationDayViewHolder
 
-class WeatherLocationDayAdapter(private val locationFullName: String) :
+class WeatherLocationDayAdapter :
     ListAdapter<WeatherLocationDayItem, WeatherLocationDayViewHolder>(WeatherLocationItemDiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherLocationDayViewHolder {
@@ -15,7 +15,7 @@ class WeatherLocationDayAdapter(private val locationFullName: String) :
 
     override fun onBindViewHolder(holder: WeatherLocationDayViewHolder, position: Int) {
         val weatherLocationDayItem = getItem(position)
-        holder.bind(weatherLocationDayItem, locationFullName)
+        holder.bind(weatherLocationDayItem)
     }
 
     object WeatherLocationItemDiffCallback : DiffUtil.ItemCallback<WeatherLocationDayItem>() {
@@ -23,7 +23,7 @@ class WeatherLocationDayAdapter(private val locationFullName: String) :
             oldItem: WeatherLocationDayItem,
             newItem: WeatherLocationDayItem
         ): Boolean {
-            return oldItem.date == newItem.date
+            return oldItem.dateEpoch == newItem.dateEpoch
         }
 
         override fun areContentsTheSame(
