@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.sanmi.labs.bold.weather_app.databinding.FragmentWeatherLocationBinding
 import com.sanmi.labs.weatherapp.core.util.Status
+import com.sanmi.labs.weatherapp.presentation.weather_location.adapter.WeatherLocationDayAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,6 +21,8 @@ class WeatherLocationFragment : Fragment() {
     private val args: WeatherLocationFragmentArgs by navArgs()
 
     private lateinit var binding: FragmentWeatherLocationBinding
+
+    private lateinit var weatherLocationDayAdapter: WeatherLocationDayAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,10 +43,13 @@ class WeatherLocationFragment : Fragment() {
 
         weatherLocationViewModel.status.observe(viewLifecycleOwner) {
             binding.progressBar.isVisible = it is Status.Loading
-            binding.textView.isVisible = it is Status.Success
+            binding.successSection.isVisible = it is Status.Success
         }
 
         weatherLocationViewModel.forecast.observe(viewLifecycleOwner) {
+            weatherLocationDayAdapter = WeatherLocationDayAdapter(it.locationFullName())
+            binding.weatherLocationRecyclerView.adapter = weatherLocationDayAdapter
+            weatherLocationDayAdapter.submitList(it.weatherLocationDayItem)
         }
     }
 }

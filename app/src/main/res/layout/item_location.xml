@@ -13,14 +13,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_spacing">
 
         <TextView
             android:id="@+id/location_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/normal_spacing"
-            android:layout_marginTop="@dimen/normal_spacing"
             android:text="@{location.name}"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -36,7 +35,6 @@
             android:id="@+id/location_country"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:text="@{location.country}"
             app:layout_constraintEnd_toEndOf="@+id/location_name"
             app:layout_constraintStart_toStartOf="@+id/location_name"

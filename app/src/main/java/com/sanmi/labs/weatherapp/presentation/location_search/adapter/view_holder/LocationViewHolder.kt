@@ -10,10 +10,7 @@ class LocationViewHolder private constructor(
     private val binding: ItemLocationBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    lateinit var location: Location
-
     fun bind(location: Location) {
-        this.location = location
         binding.location = location
         binding.executePendingBindings()
     }
