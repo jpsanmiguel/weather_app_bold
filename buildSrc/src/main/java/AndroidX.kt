@@ -17,4 +17,11 @@ object AndroidX {
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
     const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
     const val safeArgsPlugin = "androidx.navigation.safeargs.kotlin"
+
+    private const val legacySupportVersion = "1.0.0"
+    const val legacySupport = "androidx.legacy:legacy-support-v4:$legacySupportVersion"
+
+    private const val lifecycleVersion = "2.6.2"
+    const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
 }
