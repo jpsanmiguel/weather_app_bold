@@ -7,6 +7,8 @@ data class WeatherLocationItem(
     val temperatureCelsius: Double,
     val humidity: Int,
     val uv: Double,
+    val wind: Double,
+    val windDirection: String,
     val conditionDescription: String,
     val conditionImage: String,
     val weatherLocationDayItem: List<WeatherLocationDayItem>,

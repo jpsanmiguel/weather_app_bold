@@ -14,6 +14,8 @@ fun ForecastResult.toWeatherLocationItem() = WeatherLocationItem(
     this.current.temperatureCelsius,
     this.current.humidity,
     this.current.uv,
+    this.current.windKph,
+    this.current.windDirection,
     this.current.condition.text,
     this.current.condition.icon,
     this.forecast.forecasts.toWeatherLocationDayItem()

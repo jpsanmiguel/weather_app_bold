@@ -3,11 +3,11 @@ package com.sanmi.labs.weatherapp.presentation.weather_location.adapter.view_hol
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.sanmi.labs.bold.weather_app.databinding.ItemForecastDayBinding
+import com.sanmi.labs.bold.weather_app.databinding.ItemWeatherLocationDayBinding
 import com.sanmi.labs.weatherapp.presentation.model.WeatherLocationDayItem
 
 class WeatherLocationDayViewHolder private constructor(
-    private val binding: ItemForecastDayBinding
+    private val binding: ItemWeatherLocationDayBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(weatherLocationDayItem: WeatherLocationDayItem, locationFullName: String) {
@@ -18,7 +18,7 @@ class WeatherLocationDayViewHolder private constructor(
     companion object {
         fun from(parent: ViewGroup): WeatherLocationDayViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context)
-            val binding = ItemForecastDayBinding.inflate(layoutInflater, parent, false)
+            val binding = ItemWeatherLocationDayBinding.inflate(layoutInflater, parent, false)
 
             return WeatherLocationDayViewHolder(binding)
         }

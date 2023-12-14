@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">WeatherApp</string>
     <string name="search_locations">Search locations</string>
-    <string name="location">%1$s, %$s</string>
+    <string name="locationValue">%1$s, %2$s</string>
+    <string name="temperatureTitle">Temperature</string>
     <string name="averageTemperature">%.1f°C</string>
-    <string name="humidity">Humidity: %.1f%</string>
-    <string name="uv">UV: %d</string>
+    <string name="humidityTitle">Humidity</string>
+    <string name="humidityValue">%1$d\%%</string>
+    <string name="uvTitle">UV</string>
+    <string name="uvValue">%.1f</string>
+    <string name="windTitle">Wind</string>
+    <string name="windValue">%.1f kph, %2$s</string>
     <string name="minTemperature">L: %.1f°C</string>
     <string name="maxTemperature">H: %.1f°C</string>
     <string name="weather_condition_image">Weather Condition Image</string>
+    <string name="weather_location_day_background">Weather Location Day Background</string>
 </resources>

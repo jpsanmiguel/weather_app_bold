@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="weatherLocationDayItem"
+            type="com.sanmi.labs.weatherapp.presentation.model.WeatherLocationDayItem" />
+
+        <variable
+            name="locationFullName"
+            type="String" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_spacing"
+        android:layout_marginVertical="@dimen/small_spacing"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/cardViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/weather_location_day_background"
+            android:contentDescription="@string/weather_location_day_background" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_spacing">
+
+            <TextView
+                android:id="@+id/forecast_day_average_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{@string/averageTemperature(weatherLocationDayItem.averageTemperatureCelsius)}"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="48°C" />
+
+            <TextView
+                android:id="@+id/forecast_day_min_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:text="@{@string/minTemperature(weatherLocationDayItem.minTemperatureCelsius)}"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/forecast_day_average_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/forecast_day_average_temperature"
+                tools:text="H: 24°C" />
+
+            <TextView
+                android:id="@+id/forecast_day_max_temperature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:text="@{@string/maxTemperature(weatherLocationDayItem.maxTemperatureCelsius)}"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/forecast_day_min_temperature"
+                app:layout_constraintTop_toTopOf="@+id/forecast_day_min_temperature"
+                tools:text="L: 18°C" />
+
+            <TextView
+                android:id="@+id/forecast_day_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:text="@{locationFullName}"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/forecast_day_min_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/forecast_day_min_temperature"
+                tools:text="Bogotá, Colombia" />
+
+            <ImageView
+                android:id="@+id/forecast_day_current_condition_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:contentDescription="@string/weather_condition_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/forecast_day_condition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="@{weatherLocationDayItem.conditionDescription}"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/forecast_day_current_condition_image"
+                app:layout_constraintTop_toBottomOf="@+id/forecast_day_current_condition_image"
+                tools:text="Cloudy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
