@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.sanmi.labs.bold.weather_app.databinding.FragmentHomeBinding
+import com.sanmi.labs.weatherapp.core.util.Status
 import com.sanmi.labs.weatherapp.presentation.home.adapter.LocationAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -41,9 +43,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        homeViewModel.status.observe(viewLifecycleOwner) {
+            binding.progressBar.isVisible = it is Status.Loading
+            binding.locationRecyclerView.isVisible = it is Status.Success
+        }
+
         homeViewModel.locations.observe(viewLifecycleOwner) {
             locationAdapter.submitList(it)
         }
     }
-
 }
