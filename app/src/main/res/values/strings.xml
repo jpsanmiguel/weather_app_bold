@@ -14,4 +14,10 @@
     <string name="maxTemperature">H: %.1f°C</string>
     <string name="weather_condition_image">Weather Condition Image</string>
     <string name="weather_location_day_background">Weather Location Day Background</string>
+    <string name="error_state_image">Error state image</string>
+    <string name="error_state_title">Wow, this does not look good…</string>
+    <string name="error_state_description">Looks like there is a problem. Please check your connection and try again.</string>
+    <string name="empty_state_image">Empty state image</string>
+    <string name="empty_state_title">Wow, this looks empty…</string>
+    <string name="empty_state_description">Looks like there are no results.</string>
 </resources>

@@ -34,7 +34,7 @@ class LocationSearchViewModel @Inject constructor(
     }
 
     private fun listenToTextChanges() {
-        searchText.onEach { searchWeather(it) }.launchIn(viewModelScope)
+        searchText.onEach { if (it.isNotBlank()) searchWeather(it) }.launchIn(viewModelScope)
     }
 
     fun onSearchTextChange(searchText: String) {

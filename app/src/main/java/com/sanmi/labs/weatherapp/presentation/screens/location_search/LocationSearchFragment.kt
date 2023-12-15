@@ -41,7 +41,7 @@ class LocationSearchFragment : Fragment() {
         locationAdapter = LocationAdapter(LocationAdapter.OnClickListener {
             findNavController().navigate(
                 LocationSearchFragmentDirections.actionLocationSearchFragmentToWeatherLocationFragment(
-                    it.name
+                    "${it.name}, ${it.country}"
                 )
             )
         })
@@ -61,10 +61,13 @@ class LocationSearchFragment : Fragment() {
 
         locationSearchViewModel.status.observe(viewLifecycleOwner) {
             binding.progressBar.isVisible = it is Status.Loading
-            binding.locationRecyclerView.isVisible = it is Status.Success
+            binding.errorSection.isVisible = it is Status.Failed
+            binding.successSection.isVisible = it is Status.Success
         }
 
         locationSearchViewModel.locations.observe(viewLifecycleOwner) {
+            binding.locationRecyclerView.isVisible = it.isNotEmpty()
+            binding.emptySection.isVisible = it.isEmpty()
             locationAdapter.submitList(it)
         }
     }

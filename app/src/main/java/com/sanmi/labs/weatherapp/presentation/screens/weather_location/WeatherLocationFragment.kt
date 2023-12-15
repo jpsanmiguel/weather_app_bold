@@ -47,6 +47,7 @@ class WeatherLocationFragment : Fragment() {
         weatherLocationViewModel.status.observe(viewLifecycleOwner) {
             binding.progressBar.isVisible = it is Status.Loading
             binding.successSection.isVisible = it is Status.Success
+            binding.errorSection.isVisible = it is Status.Failed
         }
 
         weatherLocationViewModel.forecast.observe(viewLifecycleOwner) {
