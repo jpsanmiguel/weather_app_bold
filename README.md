@@ -11,7 +11,7 @@ Open file `local.properties` and add following line:
 ```
 API_KEY=[API_KEY]
 ```
-Replace `[API_KEY] with the ApiKey value provided in the document, or any Api Key from [WeatherAPI](https://www.weatherapi.com/).
+Replace `[API_KEY]` with the ApiKey value provided in the document (which can be found in this ![link](https://drive.google.com/file/d/1UCPpebGZG2fjKYqSnJ-RfZ6jxambsiTf/view?usp=sharing)) or any Api Key from [WeatherAPI](https://www.weatherapi.com/).
 
 Now you can run the app!
 
