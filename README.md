@@ -17,6 +17,9 @@ Now you can run the app!
 
 ## Video
 
-![Video](https://github.com/jpsanmiguel/weather_app_bold/assets/31251308/1173fb4f-c608-4bed-8dda-29a9d8b68fbd)
+https://github.com/jpsanmiguel/weather_app_bold/assets/31251308/1a5d575f-936d-4687-9442-e1e9c81f1c09
 
 This a video of the app.
+
+## APK
+
