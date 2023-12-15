@@ -65,7 +65,12 @@ dependencies {
     implementation(Retrofit.retrofitGsonConverter)
     implementation(Retrofit.okHttp)
     implementation(Retrofit.okHttpLoggingInterceptor)
+
+    testImplementation(Testing.mockWebServer)
+    testImplementation(Testing.truth)
     testImplementation(Testing.junit)
+    androidTestImplementation(Testing.mockWebServer)
+    androidTestImplementation(Testing.truth)
     androidTestImplementation(Testing.junitAndroidExtension)
     androidTestImplementation(Testing.espresso)
 }
