@@ -1,12 +1,14 @@
-package com.sanmi.labs.weatherapp.presentation.location_search.adapter
+package com.sanmi.labs.weatherapp.presentation.screens.location_search.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.sanmi.labs.weatherapp.domain.model.Location
-import com.sanmi.labs.weatherapp.presentation.location_search.adapter.view_holder.LocationViewHolder
+import com.sanmi.labs.weatherapp.presentation.screens.location_search.adapter.view_holder.LocationViewHolder
 
-class LocationAdapter(private val onClickListener: OnClickListener) : ListAdapter<Location, LocationViewHolder>(LocationItemDiffCallback) {
+class LocationAdapter(private val onClickListener: OnClickListener) : ListAdapter<Location, LocationViewHolder>(
+    LocationItemDiffCallback
+) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LocationViewHolder {
         return LocationViewHolder.from(parent)
     }

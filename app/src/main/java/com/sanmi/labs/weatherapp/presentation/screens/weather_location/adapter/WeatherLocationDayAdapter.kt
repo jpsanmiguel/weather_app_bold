@@ -1,13 +1,15 @@
-package com.sanmi.labs.weatherapp.presentation.weather_location.adapter
+package com.sanmi.labs.weatherapp.presentation.screens.weather_location.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.sanmi.labs.weatherapp.presentation.model.WeatherLocationDayItem
-import com.sanmi.labs.weatherapp.presentation.weather_location.adapter.view_holder.WeatherLocationDayViewHolder
+import com.sanmi.labs.weatherapp.presentation.screens.weather_location.adapter.view_holder.WeatherLocationDayViewHolder
 
 class WeatherLocationDayAdapter :
-    ListAdapter<WeatherLocationDayItem, WeatherLocationDayViewHolder>(WeatherLocationItemDiffCallback) {
+    ListAdapter<WeatherLocationDayItem, WeatherLocationDayViewHolder>(
+        WeatherLocationItemDiffCallback
+    ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherLocationDayViewHolder {
         return WeatherLocationDayViewHolder.from(parent)

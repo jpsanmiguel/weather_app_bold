@@ -1,4 +1,4 @@
-package com.sanmi.labs.weatherapp.presentation.weather_location
+package com.sanmi.labs.weatherapp.presentation.screens.weather_location
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

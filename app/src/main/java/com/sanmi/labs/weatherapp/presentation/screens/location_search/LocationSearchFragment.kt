@@ -1,4 +1,4 @@
-package com.sanmi.labs.weatherapp.presentation.location_search
+package com.sanmi.labs.weatherapp.presentation.screens.location_search
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,9 +9,11 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.sanmi.labs.bold.weather_app.R
 import com.sanmi.labs.bold.weather_app.databinding.FragmentLocationSearchBinding
+import com.sanmi.labs.weatherapp.core.util.CustomDividerItemDecorator
 import com.sanmi.labs.weatherapp.core.util.Status
-import com.sanmi.labs.weatherapp.presentation.location_search.adapter.LocationAdapter
+import com.sanmi.labs.weatherapp.presentation.screens.location_search.adapter.LocationAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -46,6 +48,9 @@ class LocationSearchFragment : Fragment() {
 
         binding.locationRecyclerView.apply {
             adapter = locationAdapter
+            addItemDecoration(
+                CustomDividerItemDecorator(R.drawable.divider)
+            )
         }
 
         return binding.root

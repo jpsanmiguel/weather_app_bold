@@ -1,4 +1,4 @@
-package com.sanmi.labs.weatherapp.presentation.weather_location.adapter.view_holder
+package com.sanmi.labs.weatherapp.presentation.screens.weather_location.adapter.view_holder
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.sanmi.labs.weatherapp.presentation.location_search
+package com.sanmi.labs.weatherapp.presentation.screens.location_search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,6 +8,7 @@ import com.sanmi.labs.weatherapp.core.util.Status
 import com.sanmi.labs.weatherapp.domain.model.Location
 import com.sanmi.labs.weatherapp.domain.use_case.SearchUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.launchIn
@@ -48,7 +49,9 @@ class LocationSearchViewModel @Inject constructor(
                 _locations.value = it
                 _status.value = Status.Success
             }.onFailure {
-                _status.value = Status.Failed(it)
+                if (it !is CancellationException) {
+                    _status.value = Status.Failed(it)
+                }
             }
         }
     }

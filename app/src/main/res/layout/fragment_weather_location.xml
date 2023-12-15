@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.sanmi.labs.weatherapp.presentation.weather_location.WeatherLocationViewModel" />
+            type="com.sanmi.labs.weatherapp.presentation.screens.weather_location.WeatherLocationViewModel" />
 
     </data>
 

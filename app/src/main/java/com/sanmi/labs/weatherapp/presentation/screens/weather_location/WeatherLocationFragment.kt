@@ -1,4 +1,4 @@
-package com.sanmi.labs.weatherapp.presentation.weather_location
+package com.sanmi.labs.weatherapp.presentation.screens.weather_location
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.sanmi.labs.bold.weather_app.databinding.FragmentWeatherLocationBinding
 import com.sanmi.labs.weatherapp.core.util.Status
-import com.sanmi.labs.weatherapp.presentation.weather_location.adapter.WeatherLocationDayAdapter
+import com.sanmi.labs.weatherapp.presentation.screens.weather_location.adapter.WeatherLocationDayAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

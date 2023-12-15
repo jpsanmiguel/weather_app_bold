@@ -6,14 +6,15 @@
     <data>
         <variable
             name="viewModel"
-            type="com.sanmi.labs.weatherapp.presentation.location_search.LocationSearchViewModel" />
+            type="com.sanmi.labs.weatherapp.presentation.screens.location_search.LocationSearchViewModel" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.sanmi.labs.weatherapp.presentation.location_search.LocationSearchFragment">
+        android:background="#362A84"
+        tools:context="com.sanmi.labs.weatherapp.presentation.screens.location_search.LocationSearchFragment">
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -32,6 +33,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/normal_spacing"
             android:layout_marginTop="@dimen/normal_spacing"
+            android:textColorHint="@color/white"
+            app:boxStrokeColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -40,6 +43,7 @@
                 android:id="@+id/search_text_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="@string/search_locations" />
         </com.google.android.material.textfield.TextInputLayout>
 
