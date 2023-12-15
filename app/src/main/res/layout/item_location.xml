@@ -14,8 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/normal_spacing"
-        tools:background="#362A84">
+        android:padding="@dimen/normal_spacing">
 
         <TextView
             android:id="@+id/location_name"

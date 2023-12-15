@@ -13,8 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#362A84">
+        android:layout_height="match_parent">
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -73,9 +72,6 @@
                     android:layout_marginStart="@dimen/normal_spacing"
                     android:layout_marginTop="@dimen/normal_spacing"
                     android:layout_marginEnd="@dimen/small_spacing"
-                    app:cardBackgroundColor="#5936B4"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
                     app:layout_constraintEnd_toStartOf="@+id/windCardView"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -117,9 +113,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/small_spacing"
                     android:layout_marginEnd="@dimen/normal_spacing"
-                    app:cardBackgroundColor="#5936B4"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/temperatureCardView"
@@ -162,9 +155,6 @@
                     android:layout_marginStart="@dimen/normal_spacing"
                     android:layout_marginTop="@dimen/normal_spacing"
                     android:layout_marginEnd="@dimen/small_spacing"
-                    app:cardBackgroundColor="#5936B4"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
                     app:layout_constraintEnd_toStartOf="@+id/uvCardView"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -206,9 +196,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/small_spacing"
                     android:layout_marginEnd="@dimen/normal_spacing"
-                    app:cardBackgroundColor="#5936B4"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/humidityCardView"

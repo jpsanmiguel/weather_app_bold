@@ -14,7 +14,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#362A84"
         tools:context="com.sanmi.labs.weatherapp.presentation.screens.location_search.LocationSearchFragment">
 
         <ProgressBar
@@ -46,7 +45,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/search_locations"
                 android:imeOptions="actionSearch"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="?attr/colorPrimary" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <include
