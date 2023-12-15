@@ -10,9 +10,6 @@ class SearchUseCase(
     suspend operator fun invoke(
         query: String
     ): Result<List<Location>> {
-        if (query.isBlank()) {
-            return Result.success(emptyList())
-        }
         return weatherRepository.searchWeather(query)
     }
 }

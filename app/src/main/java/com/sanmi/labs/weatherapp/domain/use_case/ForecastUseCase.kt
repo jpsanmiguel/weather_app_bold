@@ -10,9 +10,6 @@ class ForecastUseCase(
     suspend operator fun invoke(
         query: String
     ): Result<ForecastResult> {
-        if (query.isBlank()) {
-            return Result.success(ForecastResult())
-        }
         return weatherRepository.forecast(query)
     }
 }
