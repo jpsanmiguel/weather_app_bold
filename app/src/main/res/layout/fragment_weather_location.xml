@@ -51,9 +51,7 @@
                     android:layout_marginStart="@dimen/normal_spacing"
                     android:layout_marginTop="@dimen/normal_spacing"
                     android:text="@{viewModel.forecast.name}"
-                    android:textColor="@color/white"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
+                    android:textAppearance="?attr/textAppearanceHeadline2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="Bogotá" />
@@ -63,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@{viewModel.forecast.country}"
-                    android:textColor="@color/white"
+                    android:textAppearance="?attr/textAppearanceBody2"
                     app:layout_constraintStart_toStartOf="@id/name"
                     app:layout_constraintTop_toBottomOf="@id/name"
                     tools:text="Colombia" />
@@ -86,16 +84,14 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/large_spacing">
+                        android:layout_margin="@dimen/normal_spacing">
 
                         <TextView
                             android:id="@+id/temperatureTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/temperatureTitle"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -106,7 +102,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/small_spacing"
                             android:text="@{@string/averageTemperature(viewModel.forecast.temperatureCelsius)}"
-                            android:textColor="@color/white"
+                            android:textAppearance="?attr/textAppearanceBody2"
                             app:layout_constraintEnd_toEndOf="@id/temperatureTitle"
                             app:layout_constraintStart_toStartOf="@id/temperatureTitle"
                             app:layout_constraintTop_toBottomOf="@id/temperatureTitle"
@@ -132,16 +128,14 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/large_spacing">
+                        android:layout_margin="@dimen/normal_spacing">
 
                         <TextView
                             android:id="@+id/windTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/windTitle"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -152,7 +146,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/small_spacing"
                             android:text="@{@string/windValue(viewModel.forecast.wind, viewModel.forecast.windDirection)}"
-                            android:textColor="@color/white"
+                            android:textAppearance="?attr/textAppearanceBody2"
                             app:layout_constraintEnd_toEndOf="@id/windTitle"
                             app:layout_constraintStart_toStartOf="@id/windTitle"
                             app:layout_constraintTop_toBottomOf="@id/windTitle"
@@ -179,16 +173,14 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/large_spacing">
+                        android:layout_margin="@dimen/normal_spacing">
 
                         <TextView
                             android:id="@+id/humidityTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/humidityTitle"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -199,7 +191,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/small_spacing"
                             android:text="@{@string/humidityValue(viewModel.forecast.humidity)}"
-                            android:textColor="@color/white"
+                            android:textAppearance="?attr/textAppearanceBody2"
                             app:layout_constraintEnd_toEndOf="@id/humidityTitle"
                             app:layout_constraintStart_toStartOf="@id/humidityTitle"
                             app:layout_constraintTop_toBottomOf="@id/humidityTitle"
@@ -225,16 +217,14 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/large_spacing">
+                        android:layout_margin="@dimen/normal_spacing">
 
                         <TextView
                             android:id="@+id/uvTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/uvTitle"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceHeadline3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -245,7 +235,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/small_spacing"
                             android:text="@{@string/uvValue(viewModel.forecast.uv)}"
-                            android:textColor="@color/white"
+                            android:textAppearance="?attr/textAppearanceBody2"
                             app:layout_constraintEnd_toEndOf="@id/uvTitle"
                             app:layout_constraintStart_toStartOf="@id/uvTitle"
                             app:layout_constraintTop_toBottomOf="@id/uvTitle"
