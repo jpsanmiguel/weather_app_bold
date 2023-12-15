@@ -45,6 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/search_locations"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
                 android:textColor="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
