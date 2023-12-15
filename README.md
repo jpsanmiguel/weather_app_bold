@@ -23,3 +23,6 @@ This a video of the app.
 
 ## APK
 
+An APK is included in the repo just in case, so it can be installed. 
+
+![APK](https://github.com/jpsanmiguel/weather_app_bold/blob/main/APK/app-debug.apk)
